@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ARDKExamples/ContextAwareness/Occlusion/DepthMeshOcclusion.unity
-    guid: 0cd063dfb53224dbfac688ff4872d5e8
+    path: Assets/Sample.unity
+    guid: eba997836774f7a45961e3653d635e53
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 802b1a49858faf046b177b57505bde70, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 936d3fe0f1e2bd4478fae2e8674e81b1, type: 2}

@@ -39,6 +39,9 @@ namespace Niantic.ARDKExamples.Helpers
     /// Internal reference to the session, used to get the current frame to hit test against.
     private IARSession _session;
 
+
+        public GameObject onScreenObject = null;
+
     private void Start()
     {
       ARSessionFactory.SessionInitialized += OnAnyARSessionDidInitialize;
@@ -120,7 +123,15 @@ namespace Niantic.ARDKExamples.Helpers
 
       var hitPosition = result.WorldTransform.ToPosition();
 
-      _placedObjects.Add(Instantiate(PlacementObjectPf, hitPosition, Quaternion.identity));
+            if (onScreenObject == null)
+            {
+                onScreenObject = Instantiate(PlacementObjectPf);
+
+            }
+
+            onScreenObject.transform.position = hitPosition;
+
+      //_placedObjects.Add(Instantiate(PlacementObjectPf, hitPosition, Quaternion.identity));
 
       var anchor = result.Anchor;
       Debug.LogFormat
